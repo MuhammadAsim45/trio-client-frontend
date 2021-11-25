@@ -4,7 +4,7 @@ import { Root } from "./components/Root";
 import { Wealth } from "./components/Wealth";
 import { Accounts } from "./components/Accounts";
 import { Cards } from "./components/Cards";
-import { Digital_Banking } from "./components/Digital_Banking";
+import { DigitalBanking } from "./components/DigitalBanking";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
 import { Route, Routes } from "react-router";
@@ -18,7 +18,7 @@ function App() {
       </nav>
       <Routes>
         <Route path="/" element={<Root />}></Route>
-        <Route path="/Digital" element={<Digital_Banking />}></Route>
+        <Route path="/Digital" element={<DigitalBanking />}></Route>
         <Route path="/Accounts" element={<Accounts />}></Route>
         <Route path="/Cards" element={<Cards />}></Route>
         <Route path="/Loans" element={<Loans />}></Route>

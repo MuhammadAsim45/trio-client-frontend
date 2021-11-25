@@ -1,7 +1,7 @@
 import React from "react";
 import { Cardd } from "./Cardd";
 
-export const Digital_Banking = () => {
+export const DigitalBanking = () => {
   const digi = [
     {
       id: 1,
@@ -39,7 +39,7 @@ export const Digital_Banking = () => {
     <>
       <div className="container ">
         <section
-          className="d-flex justify-content-between mt-5 my-auto"
+          className="d-flex justify-content-between mt-5 my-auto content"
           style={imgStyle}
         >
           <div className="left">
@@ -52,7 +52,7 @@ export const Digital_Banking = () => {
             </p>
           </div>
           <div className="right">
-            <img src="../images/d1.png" alt="" />
+            <img src="../images/d1.png" alt="" className="right_img" />
           </div>
         </section>
         <hr />

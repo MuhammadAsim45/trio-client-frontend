@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import hbl from "./hbl.png";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { MdOutlineCall } from "../../node_modules/react-icons/md";
 import { BiSearch } from "../../node_modules/react-icons/bi";
@@ -8,17 +7,17 @@ import { FaBars } from "../../node_modules/react-icons/fa";
 import { FaTimes } from "../../node_modules/react-icons/fa";
 export const Navbar = () => {
   const [state, setstate] = useState(true);
-  //   const [variable, setvariable] = useState("");
+  // const [active, setactive] = useState(true);
 
   return (
     <>
       <div className="navbar">
         <div className="logo">
           <Link to="/">
-            <img src={hbl} alt="photo" id="logo" />
+            <img src="../images/logohbl.png" alt="" id="logo" />
           </Link>
         </div>
-        <div className={state ? "nav" : "nav active"}>
+        <div className={state ? "nav " : "nav active"}>
           <Link className="link" to="/Digital">
             DigitalBanking
           </Link>
@@ -52,10 +51,7 @@ export const Navbar = () => {
             {state ? (
               <FaBars onClick={() => setstate(false)} />
             ) : (
-              <FaTimes
-                className={state ? " " : " active"}
-                onClick={() => setstate(true)}
-              />
+              <FaTimes onClick={() => setstate(true)} />
             )}
           </i>
         </div>
@@ -63,8 +59,3 @@ export const Navbar = () => {
     </>
   );
 };
-{
-  /* <FaTimes />
-  
-  */
-}

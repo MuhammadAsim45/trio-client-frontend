@@ -177,7 +177,7 @@ export const Accounts = () => {
     <>
       <div className="container ">
         <section
-          className="d-flex justify-content-between mt-5 my-auto"
+          className="d-flex justify-content-between mt-5 my-auto content"
           style={imgStyle}
         >
           <div className="left">
@@ -193,7 +193,7 @@ export const Accounts = () => {
             </p>
           </div>
           <div className="right">
-            <img src="../images/acc1.png" alt="" />
+            <img src="../images/acc1.png" alt="" className="right_img" />
           </div>
         </section>
         <hr />

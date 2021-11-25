@@ -8,16 +8,23 @@ html {
 }
 .navbar {
   display: flex;
+  position: relative;
+  right: 0;
+
   justify-content: space-around;
-  padding: -3.4rem 0.1rem;
+  padding: 3.9rem 0.1rem;
   background-color: white;
+  transition: right 2.5s ease-in-out;
+
   margin-top: 0.2rem;
+  /* z-index: -1; */
 }
 #logo {
-  height: 6.1rem;
+  height: 4.1rem;
   width: 9.7rem;
+  padding-bottom: 2rem;
   position: relative;
-  top: 0rem;
+  top: 2rem;
 }
 .nav {
   display: flex;
@@ -25,6 +32,8 @@ html {
   width: 50rem;
   position: relative;
   top: 2rem;
+  transition: right 2.5s ease-in-out;
+
   font-size: 2rem;
 }
 .rightnav {
@@ -55,7 +64,7 @@ html {
 }
 .menu {
   position: relative;
-  left: 7.9rem;
+  /* left: 7.9rem; */
   z-index: 1000;
   flex: none;
   display: none;
@@ -174,24 +183,57 @@ input[type="submit"]:hover {
   color: #197056;
   border-bottom: 3px solid #197056;
 }
+.card_img:hover {
+  transform: scale(1.2, 1.2);
+}
+
 .card_img {
+  transition: all 0.5s ease-in-out;
 }
 .card-btn {
   margin-left: 60px;
 }
+.card_text {
+  height: 20rem;
+  overflow: auto;
+  font-size: 1.7rem;
+  line-height: 2.5rem;
+}
+.card_title {
+  height: 5rem;
+}
 .card_container {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
 }
-
-@media screen and (max-width: 998px) {
+@media screen and (max-width: 1920px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+@media screen and (max-width: 1200px) {
   html {
     font-size: 55%;
+  }
+}
+@media screen and (max-width: 998px) {
+  html {
+    font-size: 50%;
   }
 }
 @media screen and (max-width: 768px) {
   html {
     font-size: 45%;
+  }
+  .right_img {
+    padding-top: 0;
+    width: 34rem;
+    height: 33rem;
+  }
+  .content {
+    flex-direction: column;
+    height: 56rem;
   }
   .menu {
     display: block;
@@ -200,15 +242,22 @@ input[type="submit"]:hover {
     position: absolute;
     top: 0rem;
     z-index: 100;
-    width: 37rem;
+    width: 100vw;
     background-color: white;
-    right: -80vw;
-    height: 74%;
+    /* right: -80vw; */
+    height: 74vh;
     align-items: center;
     flex-flow: column;
-    transition: right 1s ease-in-out;
+    transition: right 2.5s ease-in-out;
+    /* display: none; */
+    visibility: hidden;
   }
   .nav.active {
-    right: 0%;
+    visibility: visible;
   }
+  .nav.unactive {
+    visibility: hidden;
+  }
+}
+@media screen and (max-width: 576px) {
 }

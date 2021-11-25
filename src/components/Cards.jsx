@@ -81,7 +81,7 @@ export const Cards = () => {
     <>
       <div className="container ">
         <section
-          className="d-flex justify-content-between mt-5 my-auto"
+          className="d-flex justify-content-between mt-5 my-auto content"
           style={imgStyle}
         >
           <div className="left">
@@ -92,7 +92,7 @@ export const Cards = () => {
             <p className="display-6 mt-4">with HBL Debit and Credit Cards</p>
           </div>
           <div className="right">
-            <img src="../images/ca.png" alt="" />
+            <img src="../images/ca.png" alt="" className="right_img" />
           </div>
         </section>
         <hr />
