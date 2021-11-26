@@ -84,14 +84,18 @@ export const Cards = () => {
           className="d-flex justify-content-between mt-5 my-auto content"
           style={imgStyle}
         >
-          <div className="left">
+          <div className="left" data-aos="slide-right">
             <h1 className="d_heading mt-5" id="rootHeading">
               CARDS
             </h1>
-            <p className="d_para display-1 mt-5">Add value to your life</p>
-            <p className="display-6 mt-4">with HBL Debit and Credit Cards</p>
+            <p className="d_para display-1 mt-5 text-center">
+              Add value to your life
+            </p>
+            <p className="display-6 mt-4 text-center">
+              with HBL Debit and Credit Cards
+            </p>
           </div>
-          <div className="right">
+          <div className="right" data-aos="slide-left">
             <img src="../images/ca.png" alt="" className="right_img" />
           </div>
         </section>

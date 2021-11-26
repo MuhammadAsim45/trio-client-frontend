@@ -41,18 +41,18 @@ export const Loans = () => {
         className="d-flex justify-content-between mt-5 my-auto content"
         style={imgStyle}
       >
-        <div className="left">
+        <div className="left" data-aos="slide-right">
           <h1 className="d_heading mt-5" id="rootHeading">
             LOANS
           </h1>
-          <p className="d_para display-1 mt-5">
+          <p className="d_para display-1 mt-5 text-center">
             Fulfil your dreams with our loan products
           </p>
-          <p className="display-6 mt-4">
+          <p className="display-6 mt-4 text-center">
             and build the future you see for yourself
           </p>
         </div>
-        <div className="right">
+        <div className="right" data-aos="slide-left">
           <img src="../images/l1.png" alt="" className="right_img" />
         </div>
       </section>

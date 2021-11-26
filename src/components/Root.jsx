@@ -2,13 +2,10 @@ import React, { useState } from "react";
 import { Carousel } from "react-bootstrap";
 export const Root = () => {
   const [state, setstate] = useState(true);
-  let imgStyle = {
-    minHeight: "86vh",
-  };
-  let imgStyle2 = {
-    width: "798px",
-    height: "706.98px",
-  };
+  // let imgStyle = {
+  //   minHeight: "86vh",
+  // };
+
   let fun1 = () => {
     setstate(true);
   };
@@ -18,13 +15,12 @@ export const Root = () => {
   return (
     <div>
       <div className="container">
-        <Carousel variant="dark" style={imgStyle}>
+        <Carousel variant="dark" className="carouselHeight">
           <Carousel.Item interval={1000} className="carousel ">
             <img
-              className="d-block w-100 img-fluid"
+              className="d-block w-100 img-fluid carouselImg"
               src="../images/c1.jpg"
               alt="First slide"
-              style={imgStyle2}
             />
             <Carousel.Caption>
               <h5 className="capHeading">Pakistan Banking Awards</h5>
@@ -35,10 +31,9 @@ export const Root = () => {
           </Carousel.Item>
           <Carousel.Item interval={1000}>
             <img
-              className="d-block w-100 img-fluid"
+              className="d-block w-100 img-fluid carouselImg"
               src="../images/c2.jpg"
               alt="Second slide"
-              style={imgStyle2}
             />
             <Carousel.Caption>
               <h5 className="capHeading">Expo 2020 Dubai</h5>
@@ -49,10 +44,9 @@ export const Root = () => {
           </Carousel.Item>
           <Carousel.Item interval={1000}>
             <img
-              className="d-block w-100 img-fluid "
+              className="d-block w-100 img-fluid carouselImg "
               src="../images/c3.jpg"
               alt="Third slide"
-              style={imgStyle2}
             />
             <Carousel.Caption>
               <h5 className="capHeading">CELEBRATING 50 YEARS OF HBL PLAZA</h5>
@@ -61,10 +55,9 @@ export const Root = () => {
           </Carousel.Item>
           <Carousel.Item interval={1000}>
             <img
-              className="d-block w-100 img-fluid"
+              className="d-block w-100 img-fluid carouselImg"
               src="../images/c4.jpg"
               alt="Second slide"
-              style={imgStyle2}
             />
             <Carousel.Caption>
               <h5 className="capHeading">eBanc ROSHAN DIGITAL ACCOUNT</h5>
@@ -75,10 +68,9 @@ export const Root = () => {
           </Carousel.Item>
           <Carousel.Item interval={1500}>
             <img
-              className="d-block w-100 img-fluid"
+              className="d-block w-100 img-fluid carouselImg"
               src="../images/c5.jpg"
               alt="Second slide"
-              style={imgStyle2}
             />
             <Carousel.Caption>
               <h5 className="capHeading">Attention</h5>
@@ -87,17 +79,17 @@ export const Root = () => {
           </Carousel.Item>
         </Carousel>
         <hr />
-        <section className="mt-5 vh-100">
+        <section className="mt-5 vh-100 after_carousel">
           <h1 id="rootHeading" className="text-uppercase">
             banking on the go
           </h1>
-          <p className="display-1 mt-4 ">
+          <p className="display-6 mt-4 text-center">
             YOUR BANKING EXPERIENCE
-            <p className="display-1  ">ANYTIME, ANYWHERE</p>
+            <p className="display-6  ">ANYTIME, ANYWHERE</p>
           </p>
           <div className="button mt-5 mb-5">
             <span
-              className={state ? "green" : ""}
+              className={state ? "green " : ""}
               onClick={() => {
                 fun1();
               }}
@@ -119,12 +111,18 @@ export const Root = () => {
                 src="../images/m2.jpg"
                 alt="hbl mobile"
                 className="img-fluid img_mobile"
+                data-aos="slide-right"
               />
-              <div className="right-mobile d-flex flex-column align-items-center justify-content-start ">
+              <div
+                className="right-mobile d-flex flex-column align-items-center justify-content-start "
+                data-aos="slide-left"
+              >
                 <h1 className="mobile_heading ">
                   <h1>HBL MOBILE</h1>
                 </h1>
-                <p className="display-1 disp">BANKING AT YOUR FINGER TIP</p>
+                <p className="display-5 disp text-center">
+                  BANKING AT YOUR FINGER TIP
+                </p>
                 <button className="login btn">download now</button>
               </div>
             </div>
@@ -139,7 +137,7 @@ export const Root = () => {
                 <h1 className="mobile_heading ">
                   <h1>KONNECT</h1>
                 </h1>
-                <p className="display-1 disp">
+                <p className="display-5 disp text-center">
                   YOUR PERSONALIZED BANKING EXPERIENCE
                 </p>
                 <button className="login btn">MORE DETAILS</button>

@@ -7,7 +7,6 @@ import { FaBars } from "../../node_modules/react-icons/fa";
 import { FaTimes } from "../../node_modules/react-icons/fa";
 export const Navbar = () => {
   const [state, setstate] = useState(true);
-  // const [active, setactive] = useState(true);
 
   return (
     <>
@@ -18,19 +17,19 @@ export const Navbar = () => {
           </Link>
         </div>
         <div className={state ? "nav " : "nav active"}>
-          <Link className="link" to="/Digital">
+          <Link className="link" to="/Digital" onClick={() => setstate(true)}>
             DigitalBanking
           </Link>
-          <Link className="link" to="/Accounts">
+          <Link className="link" to="/Accounts" onClick={() => setstate(true)}>
             Accounts
           </Link>
-          <Link className="link" to="/Cards">
+          <Link className="link" to="/Cards" onClick={() => setstate(true)}>
             Cards
           </Link>
-          <Link className="link" to="/Loans">
+          <Link className="link" to="/Loans" onClick={() => setstate(true)}>
             Loans
           </Link>
-          <Link className="link" to="/Wealth">
+          <Link className="link" to="/Wealth" onClick={() => setstate(true)}>
             Wealth
           </Link>
         </div>
