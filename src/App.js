@@ -1,10 +1,12 @@
 import React from "react";
-import { Loans } from "./components/Loans";
+import { About } from "./components/About";
 import { Root } from "./components/Root";
-import { Wealth } from "./components/Wealth";
-import { Accounts } from "./components/Accounts";
-import { Cards } from "./components/Cards";
-import { DigitalBanking } from "./components/DigitalBanking";
+import { Contact } from "./components/Contact";
+import { Features } from "./components/Features";
+import { Trio } from "./components/Trio";
+import { Home } from "./components/Home";
+import { Marketing } from "./components/Marketing";
+
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
 import { Route, Routes } from "react-router";
@@ -14,15 +16,15 @@ function App() {
     <>
       <nav>
         <Navbar />
-        <hr />
       </nav>
       <Routes>
         <Route path="/" element={<Root />}></Route>
-        <Route path="/Digital" element={<DigitalBanking />}></Route>
-        <Route path="/Accounts" element={<Accounts />}></Route>
-        <Route path="/Cards" element={<Cards />}></Route>
-        <Route path="/Loans" element={<Loans />}></Route>
-        <Route path="/Wealth" element={<Wealth />}></Route>
+        <Route path="/home" element={<Home />}></Route>
+        <Route path="/Features" element={<Features />}></Route>
+        <Route path="/Trio" element={<Trio />}></Route>
+        <Route path="/marketing" element={<Marketing />}></Route>
+        <Route path="/About" element={<About />}></Route>
+        <Route path="/Contact" element={<Contact />}></Route>
       </Routes>
       <Footer />
     </>

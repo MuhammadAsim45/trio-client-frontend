@@ -12,18 +12,21 @@ html {
 }
 .navbar {
   display: flex;
-  position: relative;
+  position: sticky;
+  /* position: relative; */
   right: 0;
+  width: 100%;
 
   justify-content: space-around;
-  padding: 3.9rem 0.1rem;
+  align-items: center;
+  /* padding: 3.9rem 0.1rem; */
   background-color: white;
   transition: right 2.5s ease-in-out;
 
   margin-top: 0.2rem;
 }
 #logo {
-  height: 4.1rem;
+  height: 9.1rem;
   width: 9.7rem;
   padding-bottom: 2rem;
   position: relative;
@@ -32,9 +35,9 @@ html {
 .nav {
   display: flex;
   justify-content: space-around;
-  width: 50rem;
+  width: 84rem;
   position: relative;
-  top: 2rem;
+  /* top: 2rem; */
   transition: right 2.5s ease-in-out;
 
   font-size: 2rem;
@@ -52,9 +55,9 @@ html {
 }
 .login {
   padding: 0.8rem 1.8rem;
-  background-color: #197056;
+  background-color: #da7c11;
   color: white;
-  border: 0.1rem solid #197056;
+  border: 0.1rem solid #da7c11;
 }
 .icon {
   cursor: pointer;
@@ -62,7 +65,7 @@ html {
   margin-left: 1.2rem;
 }
 .icon:hover {
-  color: #197056;
+  color: #da7c11;
 }
 .menu {
   position: relative;
@@ -72,8 +75,8 @@ html {
 }
 .login:hover {
   background-color: white;
-  color: #197056;
-  border: 0.1rem solid #197056;
+  color: #da7c11;
+  border: 0.1rem solid #da7c11;
 }
 .link {
   color: black;
@@ -82,7 +85,7 @@ html {
   font-family: "Arial Narrow", Arial, sans-serif;
 }
 .link:hover {
-  color: #197056;
+  color: #da7c11;
 }
 
 .footer {
@@ -112,21 +115,45 @@ html {
 #rootHeading {
   width: fit-content;
   margin: auto;
-  color: #197056;
+  color: #da7c11;
   font-weight: bolder;
   border-bottom: 1px solid #197056;
   padding-bottom: 3px;
 }
+.left {
+  /* height: 41rem; */
+  height: auto;
+  justify-content: space-evenly;
+  align-items: center;
+}
 .disp {
   width: fit-content;
-  margin: auto;
-  color: #197056;
+  margin: 0px auto;
+  color: #da7c11;
   cursor: pointer;
+}
+
+.pointer {
+  cursor: pointer;
+}
+.playstore_img {
+  width: 59rem;
+  height: 49rem;
+}
+.apple {
+  font-size: 2.8rem;
 }
 .button {
   width: fit-content;
   margin: auto;
   outline: none;
+}
+.button_container {
+  display: flex;
+  width: 17rem;
+  text-align: center;
+  justify-content: space-between;
+  /* align-self: center; */
 }
 .button span {
   cursor: pointer;
@@ -137,14 +164,14 @@ html {
 }
 .button span:active,
 .button span:hover {
-  color: #197056;
-  border-bottom: 3px solid #197056;
+  color: #da7c11;
+  border-bottom: 3px solid #da7c11;
 }
 .btn {
   font-size: 2rem;
 }
 .mobile_heading {
-  color: #197056;
+  color: #da7c11;
   font-weight: 2000;
 }
 .img_mobile {
@@ -155,8 +182,12 @@ html {
   height: 27rem;
 }
 .green {
-  color: #197056;
-  border-bottom: 3px solid #197056;
+  color: #da7c11;
+  border-bottom: 3px solid #da7c11;
+}
+.systemimg {
+  width: 52rem;
+  height: 40rem;
 }
 .card_img:hover {
   transform: scale(1.2, 1.2);
@@ -164,9 +195,16 @@ html {
 
 .card_img {
   transition: all 0.5s ease-in-out;
+  min-height: 23.8rem;
+}
+.main_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 .card-btn {
-  margin-left: 60px;
+  /* margin-left: 60px; */
 }
 .card_text {
   height: 20rem;
@@ -187,6 +225,11 @@ html {
   margin: auto;
   width: 69vw;
 }
+.content {
+}
+.leftabout {
+  height: auto;
+}
 
 @media screen and (max-width: 1920px) {
   html {
@@ -195,17 +238,24 @@ html {
 }
 @media screen and (max-width: 1200px) {
   html {
-    font-size: 55%;
+    font-size: 45%;
+  }
+  .hh1 {
+    font-size: xx-large;
+  }
+  .hh2 {
+    font-size: large;
+  }
+  .hh3 {
+    font-size: medium;
+  }
+  .right_img {
+    height: 39rem;
   }
 }
 @media screen and (max-width: 998px) {
   html {
-    font-size: 45%;
-  }
-  .right_img {
-    padding-top: 0;
-    transform: scale(0.6, 0.6);
-    margin: auto auto;
+    font-size: 40%;
   }
 
   .content {
@@ -219,7 +269,7 @@ html {
 }
 @media screen and (max-width: 768px) {
   html {
-    font-size: 45%;
+    font-size: 35%;
   }
   .carouselHeight {
     min-height: 1rem;
@@ -249,21 +299,44 @@ html {
   .hbl_mobile {
     flex-direction: column-reverse;
   }
-  .right_img {
-    margin: auto auto;
-    width: 50rem;
-    height: 70rem;
-  }
 
   .navbar {
     justify-content: space-evenly;
+    background-color: #fff;
+    position: relative;
   }
   .img_mobile {
     width: 72.8rem;
     height: 48.50625rem;
   }
 }
+@media screen and (max-width: 660px) {
+  .hh1 {
+    font-size: large;
+  }
+  .hh2 {
+    font-size: medium;
+  }
+  .hh3 {
+    font-size: small;
+  }
+}
 @media screen and (max-width: 576px) {
+  .right_img {
+    height: 30rem;
+    width: 31rem;
+  }
+}
+@media screen and (max-width: 378px) {
+  .hh1 {
+    font-size: large;
+  }
+  .hh2 {
+    font-size: medium;
+  }
+  .hh3 {
+    font-size: small;
+  }
 }
 @media screen and (max-width: 320px) {
   html {

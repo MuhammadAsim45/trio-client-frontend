@@ -1,8 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { MdOutlineCall } from "../../node_modules/react-icons/md";
-import { BiSearch } from "../../node_modules/react-icons/bi";
-import { BsMic } from "../../node_modules/react-icons/bs";
 import { FaBars } from "../../node_modules/react-icons/fa";
 import { FaTimes } from "../../node_modules/react-icons/fa";
 export const Navbar = () => {
@@ -10,41 +7,35 @@ export const Navbar = () => {
 
   return (
     <>
-      <div className="navbar">
+      <div className="navbar shadow">
         <div className="logo">
           <Link to="/">
-            <img src="../images/logohbl.png" alt="" id="logo" />
+            <img src="../images/logo.png" alt="" id="logo" />
           </Link>
         </div>
         <div className={state ? "nav " : "nav active"}>
-          <Link className="link" to="/Digital" onClick={() => setstate(true)}>
-            DigitalBanking
+          <Link className="link" to="/home" onClick={() => setstate(true)}>
+            Home
           </Link>
-          <Link className="link" to="/Accounts" onClick={() => setstate(true)}>
-            Accounts
+          <Link className="link" to="/Features" onClick={() => setstate(true)}>
+            Features
           </Link>
-          <Link className="link" to="/Cards" onClick={() => setstate(true)}>
-            Cards
+          <Link className="link" to="/Trio" onClick={() => setstate(true)}>
+            Why Trio?
           </Link>
-          <Link className="link" to="/Loans" onClick={() => setstate(true)}>
-            Loans
+          <Link className="link" to="/marketing" onClick={() => setstate(true)}>
+            Marketing tools
           </Link>
-          <Link className="link" to="/Wealth" onClick={() => setstate(true)}>
-            Wealth
+          <Link className="link" to="/About" onClick={() => setstate(true)}>
+            About Us
+          </Link>
+          <Link className="link" to="/Contact" onClick={() => setstate(true)}>
+            Contact
           </Link>
         </div>
         <div className="rightnav">
-          <i className="icon">
-            <BsMic />
-          </i>
-          |
-          <i className="icon">
-            <BiSearch />
-          </i>
-          |
-          <i className="icon">
-            <MdOutlineCall />
-          </i>
+          <button className="login {variable}">SIGN UP</button>
+
           <button className="login {variable}">LOGIN</button>
           <i className="menu icon">
             {state ? (
